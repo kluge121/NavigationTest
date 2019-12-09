@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/navigation1"
+    app:startDestination="@id/nav1Fragment1">
+
+    <fragment
+        android:id="@+id/nav1Fragment1"
+        android:name="com.kakaopay.navigationtest.nav1.Nav1Fragment1"
+        android:label="fragment_nav1_1"
+        tools:layout="@layout/fragment_nav1_1" >
+        <action
+            android:id="@+id/action_nav1Fragment1_to_nav1Fragment2"
+            app:destination="@id/nav1Fragment2" />
+    </fragment>
+    <fragment
+        android:id="@+id/nav1Fragment2"
+        android:name="com.kakaopay.navigationtest.nav1.Nav1Fragment2"
+        android:label="fragment_nav1_2"
+        tools:layout="@layout/fragment_nav1_2" >
+        <action
+            android:id="@+id/action_nav1Fragment2_to_nav1Fragment3"
+            app:destination="@id/nav1Fragment3" />
+    </fragment>
+    <fragment
+        android:id="@+id/nav1Fragment3"
+        android:name="com.kakaopay.navigationtest.nav1.Nav1Fragment3"
+        android:label="fragment_nav1_3"
+        tools:layout="@layout/fragment_nav1_3" />
+</navigation>

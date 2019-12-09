@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/navigation2"
+    app:startDestination="@id/nav2Fragment1">
+
+    <fragment
+        android:id="@+id/nav2Fragment1"
+        android:name="com.kakaopay.navigationtest.nav2.Nav2Fragment1"
+        android:label="fragment_nav2_1"
+        tools:layout="@layout/fragment_nav2_1">
+        <action
+            android:id="@+id/action_nav2Fragment1_to_nav2Fragment2"
+            app:destination="@id/nav2Fragment2" />
+        <deepLink
+            android:id="@+id/deepLink"
+            app:uri="test://fragment2_1" />
+    </fragment>
+    <fragment
+        android:id="@+id/nav2Fragment2"
+        android:name="com.kakaopay.navigationtest.nav2.Nav2Fragment2"
+        android:label="fragment_nav2_2"
+        tools:layout="@layout/fragment_nav2_2">
+        <action
+            android:id="@+id/action_nav2Fragment2_to_nav2Fragment3"
+            app:destination="@id/nav2Fragment3" />
+        <deepLink
+            android:id="@+id/deepLink3"
+            app:uri="test://fragment2_2" />
+    </fragment>
+    <fragment
+        android:id="@+id/nav2Fragment3"
+        android:name="com.kakaopay.navigationtest.nav2.Nav2Fragment3"
+        android:label="fragment_nav2_3"
+        tools:layout="@layout/fragment_nav2_3" >
+        <deepLink
+            android:id="@+id/deepLink2"
+            app:uri="test://fragment2_3" />
+    </fragment>
+
+</navigation>
